@@ -1,0 +1,21 @@
+{
+    "name": "mathieutu/poo",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Mathieu TUDISCO",
+            "email": "dev@mathieutu.ovh"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "tightenco/collect": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ecrire\\": "Ecrire/",
+            "Article\\": "Article/",
+            "PC\\": "PC/"
+        }
+    }
+}
