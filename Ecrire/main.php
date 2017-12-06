@@ -1,6 +1,5 @@
 <?php
 
-
 use Ecrire\Bic;
 use Ecrire\Cahier;
 
@@ -13,10 +12,8 @@ $stylo = new Bic('bleu');
 
 $stylo->ecrire('Foddfo')->sur($cahier);
 
-
 $stylo2 = new QuatreCouleurs;
 $stylo2->ecrire('Bar')->en('rouge')->sur($cahier)->page(134);
-
 
 $stylo3 = new Criterium;
 $stylo3->ecrire('Bar')->sur($cahier)->page(212);
@@ -26,5 +23,3 @@ $gomme = new Gomme;
 $gomme->effacer($cahier->page(134));
 
 echo $cahier->lire();
-
-

@@ -8,25 +8,19 @@
 
 namespace Ecrire;
 
-
 class Phrase
 {
     private $contenu;
     private $couleur;
-
-    public function setContenu($contenu)
-    {
-        $this->contenu = $contenu;
-    }
 
     public function getContenu()
     {
         return $this->contenu;
     }
 
-    public function setCouleur($couleur)
+    public function setContenu($contenu)
     {
-        $this->couleur = $couleur;
+        $this->contenu = $contenu;
     }
 
     public function getCouleur()
@@ -34,7 +28,13 @@ class Phrase
         return $this->couleur;
     }
 
-    public function sur(Cahier $cahier){
+    public function setCouleur($couleur)
+    {
+        $this->couleur = $couleur;
+    }
+
+    public function sur(Cahier $cahier)
+    {
         $cahier->setContent($this);
     }
 }
