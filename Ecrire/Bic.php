@@ -8,22 +8,23 @@ class Bic
 
     public function __construct($color)
     {
-        $this->color = $color;
+        $this->setColor($color);
     }
 
     public function ecrire($content)
     {
-        $phrase = new Phrase();
-
-        $phrase->setContenu($content);
-
-        $phrase->setCouleur($this->color);
-
-        return $phrase;
+        return new Phrase($content, $this);
     }
 
     public function getColor()
     {
         return $this->color;
+    }
+
+    public function setColor($color)
+    {
+        $this->color = $color;
+
+        return $this;
     }
 }

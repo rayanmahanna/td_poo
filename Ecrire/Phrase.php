@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dorian
- * Date: 06/12/2017
- * Time: 18:14
- */
 
 namespace Ecrire;
 
@@ -12,6 +6,11 @@ class Phrase
 {
     private $contenu;
     private $couleur;
+
+    public function __construct($contenu, Bic $stylo)
+    {
+        $this->setContenu($contenu)->setCouleur($stylo->getColor());
+    }
 
     public function getContenu()
     {
@@ -21,6 +20,8 @@ class Phrase
     public function setContenu($contenu)
     {
         $this->contenu = $contenu;
+
+        return $this;
     }
 
     public function getCouleur()
@@ -31,6 +32,8 @@ class Phrase
     public function setCouleur($couleur)
     {
         $this->couleur = $couleur;
+
+        return $this;
     }
 
     public function sur(Cahier $cahier)

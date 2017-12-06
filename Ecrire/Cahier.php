@@ -22,7 +22,10 @@ class Cahier
 
     public function setContent(Phrase $phrase)
     {
-        $this->content = 'Ton texte ' . $phrase->getContenu() . ' au format ' . $this->format . ' en couleur ' . $phrase->getCouleur();
+        $this->content = 'Ton texte ' . $phrase->getContenu() . ' au format '
+            . $this->format . ' en couleur ' . $phrase->getCouleur();
+
+        return $this;
     }
 
     public function lire()
