@@ -2,7 +2,7 @@
 
 namespace Ecrire;
 
-class Bic
+class Bic extends Stylo
 {
     private $color;
 

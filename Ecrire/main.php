@@ -6,11 +6,17 @@ use Ecrire\Cahier;
 require '../vendor/autoload.php';
 
 $cahier = new Cahier;
-$cahier->setFormat('a3');
+try {
+    $cahier->setFormat('a3');
+}
+ catch (Exception $e) {
+}
 
 $stylo = new Bic('bleu');
 
 $stylo->ecrire('Foddfo')->sur($cahier);
+
+//-----------------------------------------------
 
 $stylo2 = new QuatreCouleurs;
 $stylo2->ecrire('Bar')->en('rouge')->sur($cahier)->page(134);
