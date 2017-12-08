@@ -4,34 +4,34 @@ namespace Ecrire;
 
 class Phrase
 {
-    private $contenu;
-    private $couleur;
+    private $content;
+    private $color;
 
-    public function __construct($contenu, Bic $stylo)
+    public function __construct($content, Stylo $stylo)
     {
-        $this->setContenu($contenu)->setCouleur($stylo->getColor());
+        $this->setContent($content)->setColor($stylo->getColor());
     }
 
-    public function getContenu()
+    public function getContent()
     {
-        return $this->contenu;
+        return $this->content;
     }
 
-    public function setContenu($contenu)
+    public function setContent($content)
     {
-        $this->contenu = $contenu;
+        $this->content = $content;
 
         return $this;
     }
 
-    public function getCouleur()
+    public function getColor()
     {
-        return $this->couleur;
+        return $this->color;
     }
 
-    public function setCouleur($couleur)
+    public function setColor($color)
     {
-        $this->couleur = $couleur;
+        $this->color = $color;
 
         return $this;
     }
@@ -39,5 +39,12 @@ class Phrase
     public function sur(Cahier $cahier)
     {
         $cahier->setContent($this);
+
+        return $cahier;
+    }
+
+    public function en($color)
+    {
+        return $this->setColor(QuatreCouleurs::filterColor($color));
     }
 }
