@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Rayan
@@ -6,10 +7,16 @@
  * Time: 03:07
  */
 
+
 namespace Ecrire;
 
-
-class Criterium extends stylo
+class Criterium extends \Ecrire\Stylo
 {
 
+    protected $color = 'gris';
+
+    public function setColor($color)
+    {
+        throw new \Exception('Un criterium ne peut pas changer de couleur !');
+    }
 }
